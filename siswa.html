@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <form method="post" action="simpan.php" >
+        <h3>Input Data Siswa : </h3>
+        <p><label>NISN<input type="number" name="nisn" required="required"></label></p>
+        <p><label>Nama Siswa<input type="text" name="nama_siswa" required="required"></label></p>
+        <p>
+            <label>Jenis Kelamin
+                <input type="radio" id="laki_laki" name="jenis_kelamin" value="laki-laki" required="required">
+                <label for="laki_laki">Laki-laki</label>
+                <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan" required="required">
+                <label for="perempuan">Perempuan</label>
+            </label>
+        </p>
+        <p><label>Tanggal Lahir<input type="date" name="tanggal_lahir" required="required"></label></p>
+        <p><label>Alamat<textarea name="alamat" cols="30" rows="1" required="required"></textarea></label></p>
+        <p><label>Telepon<input type="text" name="telepon" required="required"></label></p>
+        <p><label>Kelas<input type="text" name="kelas" required="required"></label></p>
+        <input type="submit" name="simpansiswa" value="simpan">
+        <input type="reset" name="reset" value="reset">
+    </form>
+</body>
+</html>
