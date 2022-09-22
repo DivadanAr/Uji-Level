@@ -59,9 +59,9 @@
                     <p>Data Barang</p>
                 </div>
                 <div class="button">
-                    <div><p><a href="barang.html" class="btn-tmbh">Tambah Data Barang</a></p></div>
+                    <div><p><a href="siswa.html" class="btn-tmbh">Tambah Data Siswa</a></p></div>
                     <form action="searchbarang.php" methode="GET" class="search">
-                        <input type="text" name="searchbarang" placeholder="search" autocomplete="off" required="required"/>
+                        <input type="text" name="searchbarang" placeholder="<?php echo $_GET['searchbarang']?>" autocomplete="off" required="required"/>
                         <button type="submit"><i name="search" class="fa fa-search"></i></button>
                     </form>
                 </div>
@@ -77,7 +77,10 @@
                         <th>Edit</th>
                     </tr>
                     <?php
-                        $sql = "SELECT * FROM data_barang";
+                        if(isset($_GET['searchbarang'])){
+                            $search = $_GET['searchbarang'];
+                            $sql = "SELECT * FROM data_barang WHERE kode_barang='$search' or nama_barang like'%$search%' or jenis='$search' or merek='$search' or kondisi_barang='$search' or jumlah_barang='$search'";
+                        
                         $query = mysqLi_query ($connect,$sql);
                         while($data = mysqLi_fetch_array($query)){
                             echo "
@@ -95,6 +98,7 @@
                             </tr>
                             ";
                             }
+                        }
                         ?>
                 </table>
                 </div>

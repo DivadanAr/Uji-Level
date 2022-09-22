@@ -27,6 +27,8 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+
     <title>Data Siswa</title>
 </head>
 <body>
@@ -60,8 +62,8 @@
                 </div>
                 <div class="button">
                     <div><p><a href="siswa.html" class="btn-tmbh">Tambah Data Siswa</a></p></div>
-                    <form action="searchsiswa.php" methode="GET" class="search">
-                        <input type="text" name="searchsiswa" placeholder="search" autocomplete="off" required="required"/>
+                    <form action="searchsiswa.php" methode="POST" class="search">
+                        <input type="text" name="searchsiswa"  placeholder="<?php echo $_GET['searchsiswa']?>" required="required" autocomplete="off"/>
                         <button type="submit"><i name="search" class="fa fa-search"></i></button>
                     </form>
                 </div>
@@ -72,13 +74,16 @@
                             <th>Nama Siswa</th>
                             <th>Jenis Kelamin</th>
                             <th>Tanggal Lahir</th>
-                            <th style="width='70px'">Alamat</th>
+                            <th>Alamat</th>
                             <th>Telepon</th>
                             <th>kelas</th>
                             <th>Action</th>
                         </tr>
                         <?php
-                            $sql = "SELECT * FROM data_siswa";
+                            if(isset($_GET['searchsiswa'])){
+                                $search = $_GET['searchsiswa'];
+                                $sql = "SELECT * FROM data_siswa WHERE nisn='$search' or nama_siswa like'%$search%' or jenis_kelamin like'%$search%' or tanggal_lahir='$search' or alamat like'%$search%' or telepon='$search' or kelas like'%$search%'";
+                            
                             $query = mysqLi_query ($connect,$sql);
                             while($data = mysqLi_fetch_array($query)){
                                 echo "
@@ -97,6 +102,7 @@
                                 </tr>
                                 ";
                             }
+                        }
                         ?>
                     </table>
                 </div>

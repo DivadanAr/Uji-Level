@@ -4,6 +4,9 @@ body{
     background-color: #DCE1F1;
     display: flex   ;
 }
+a{
+    text-decoration: none;
+}
 .container-sidebar{
     display: flex;
     min-height: 100vh;
@@ -29,34 +32,34 @@ body{
     width: 50px;
     height: 50px;
 }
-.judul p{
+.app-name p{
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-size: 30px;
     margin: 0px 3px;
 }
-.judul p span{
+.app-name p span{
     color: black;
 }
-.menu ul{
+.menubar ul{
     list-style-type: none;
     padding: 0px;
     align-items: center;
 }
-.menu ul li a{
+.menubar ul li a{
     text-decoration: none;
     color: white;
     font-size: 22px;
     font-family: 'Courier Prime', monospace;
     font-weight: bold;
-    line-height: 42px;
+    line-height: 37px;
     padding-left: 35px;
-
+    box-sizing: content-box;
 }
-.menu ul li:first-child{
+.menu{
     background-color: black;
-    width: 87%;
+    width: 200px;
     height: 37px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -77,6 +80,7 @@ body{
 }
 .text p:first-child{
     font-size: 128px;
+    font-weight: bold;
     font-family: 'Quicksand', sans-serif;
     margin: 90px 0px 0px 70px;
 }
@@ -121,11 +125,225 @@ body{
 .btn ul li a{
     display: inline-block;
     background-color: #3C4471;
-    width: 362px;
+    width: 400px;
     height: 122px;
     text-decoration: none;
     color: white;
     font-family: 'Courier prime', monospace;
-    border-radius: 100px;
-    font-size: 32px;
+    border-radius: 45px;
+    font-size: 30px;
+}
+.judul{
+    background-color: black;
+    width: 180px;
+    height: 46;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.judul p{
+    font-family: 'quicksand', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    padding-bottom: 2px;
+    font-weight: bold;
+}
+.judul-tmbh{
+    background-color: black;
+    width: 250px;
+    height: 46;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.judul-tmbh p{
+    font-family: 'quicksand', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+    padding-bottom: 2px;
+}
+.button, .table-content{
+    margin-left: 80px;
+}
+
+/* table data */
+.table-content table{
+    margin-top: 15px;
+    width: 1050px;
+}
+.table-content table th{
+    text-align: center;
+    height: 60px;
+    background-color: #FFB200;
+    text-transform: uppercase;
+    font-family: 'quicksand', sans-serif;
+}
+.table-content table tr td{
+        font-family: 'quicksand', sans-serif;
+}
+.table-content table th:first-child{
+    border-top-left-radius: 15px;
+}
+.table-content table th:last-child{
+    border-top-right-radius: 15px;
+}
+.table-content table td{
+    background-color: rgb(214, 214, 214);
+    padding-left: 7px;
+    height: 40px;
+}
+.table-content table tr th:first-child{
+    width: 100px;
+}
+.table-content table tr td:first-child{
+    width: 100px;
+}
+.table-content table tr th:last-child{
+    width: 70px;
+}
+.table-content table tr td:last-child{
+    width: 70px;
+}
+.table-content table tr .kode{
+    width: 100px;
+}
+.button, .table-content{
+    margin-left: 80px;
+}
+.button{
+    width: 1040px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* tombol tambah */
+.button p{
+    margin: 0;
+}
+.btn-tmbh{
+    background-color: #5BCC66;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+    font-family: 'quicksand', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 2px 2px #d4d4d4;
+}
+
+/* search */
+.button{
+    display: flex;
+    align-items: center;
+}
+.search input{
+    width: 200px;
+    height: 25px;
+    border-radius: 20px;
+    border: 1px solid rgb(163, 163, 163);
+    padding-left: 10px;
+}
+.search button{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.search button i{
+    font-size: 21.7px;
+}
+/* tombol edit */
+.action a:first-child{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(87, 171, 255);
+    border-radius: 5px;
+}
+.action a:last-child{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+}
+.action a img{
+    margin-top: 7px;
+    width: 15px;
+}
+.btn-tmbh h4 a{
+    color: black;
+    font-family: 'Mitr', sans-serif;
+}
+.table-content table .action{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form-edit{
+    margin-left: 20px;
+}
+.form-edit table tr th{
+    text-align: left;
+    font-family: 'quicksand', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.form-edit table tr td{
+    text-align: left;
+    font-family: 'quicksand', sans-serif;
+}
+.form-edit table tr td input, textarea{
+    width: 1100px;
+    height: 30px;
+    padding-left: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    font-family: 'quicksand', sans-serif;
+    color: rgb(36, 36, 36);
+    font-size: 15px;
+}
+
+.form-edit table tr td input[type=radio]{
+    height: 15px;
+    width: 15px;
+    font-family: 'quicksand', sans-serif;
+}
+
+/* button simpan & cancel */
+.btn-simpan-cancel{
+    margin-left: 78%;
+}
+.btn-simpan-cancel a{
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    background-color: red;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: 'quicksand', sans-serif;
+    text-transform: uppercase;
+    margin: 5px;
+    box-shadow: 2px 2px #d4d4d4;
+
+}
+.btn-simpan-cancel input{
+    background-color: #5BCC66;
+    width: 75px;
+    height: 30px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin: 5px;
+    font-family: 'quicksand', sans-serif;
+    box-shadow: 2px 2px #d4d4d4;
 }

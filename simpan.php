@@ -10,7 +10,7 @@
         $telepon = $_POST['telepon'];
         $kelas = $_POST['kelas'];
 
-        $sql = "INSERT INTO data_siswa (nisn, nama_siswa, jenis_kelamin, tanggal_lahir, alamat, telepon,kelas) VALUES ('$nisn', '$nama_siswa', '$jenis_kelamin', '$tanggal_lahir', '$alamat', '$telepon', '$kelas')";
+        $sql = "INSERT INTO data_siswa (nisn, nama_siswa, jenis_kelamin, tanggal_lahir, alamat, telepon, kelas) VALUES ('$nisn', '$nama_siswa', '$jenis_kelamin', '$tanggal_lahir', '$alamat', '$telepon', '$kelas')";
         $query = mysqLi_query($connect, $sql);
 
     if($query){
