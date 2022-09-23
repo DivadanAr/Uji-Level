@@ -73,7 +73,7 @@
                         <th>Jenis</th>
                         <th>merek</th>
                         <th>kondisi</th>
-                        <th>Stok</th>
+                        <th width='150px'>Jumlah Barang</th>
                         <th>Edit</th>
                     </tr>
                     <?php

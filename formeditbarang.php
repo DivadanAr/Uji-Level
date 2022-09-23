@@ -92,7 +92,7 @@
                         <td><input type="text" name="kondisi_barang" value="<?php echo $data['kondisi_barang']?>" required="required"></td>
                     </tr>
                     <tr>
-                        <th>Stok :</th>
+                        <th>Jumlah Barang :</th>
                     </tr>
                     <tr>
                     <td><input type="number" name="jumlah_barang" value="<?php echo $data['jumlah_barang']?>" required="required"></td>

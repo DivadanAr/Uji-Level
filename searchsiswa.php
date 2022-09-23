@@ -100,9 +100,14 @@
                                         <a href='hapus.php?nisn=".$data['nisn']."' ><img src='hapus.png'></a>
                                     </td>
                                 </tr>
-                                ";
+                                ";                            
                             }
                         }
+                        else{
+                            
+                            echo"Data Tidak Ditemukan";
+                        }
+                        
                         ?>
                     </table>
                 </div>
